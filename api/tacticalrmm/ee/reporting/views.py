@@ -372,7 +372,7 @@ class SharedTemplatesRepo(APIView):
 
     def get(self, request: Request) -> Response:
         try:
-            url = "https://raw.githubusercontent.com/amidaware/reporting-templates/master/index.json"
+            url = "https://raw.githubusercontent.com/vladyspavlov/reporting-templates/master/index.json"
             response = requests.get(url, timeout=15)
             files = response.json()
             return Response(

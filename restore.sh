@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 SCRIPT_VERSION="62"
-SCRIPT_URL='https://raw.githubusercontent.com/amidaware/tacticalrmm/master/restore.sh'
+SCRIPT_URL='https://raw.githubusercontent.com/vladyspavlov/tacticalrmm/master/restore.sh'
 
 sudo apt update
 sudo apt install -y curl wget dirmngr gnupg lsb-release ca-certificates
@@ -325,7 +325,7 @@ sudo mkdir /rmm
 sudo chown ${USER}:${USER} /rmm
 sudo mkdir -p /var/log/celery
 sudo chown ${USER}:${USER} /var/log/celery
-git clone https://github.com/amidaware/tacticalrmm.git /rmm/
+git clone https://github.com/vladyspavlov/tacticalrmm.git /rmm/
 cd /rmm
 git config user.email "admin@example.com"
 git config user.name "Bob"
@@ -333,7 +333,7 @@ git checkout master
 
 sudo mkdir -p ${SCRIPTS_DIR}
 sudo chown ${USER}:${USER} ${SCRIPTS_DIR}
-git clone https://github.com/amidaware/community-scripts.git ${SCRIPTS_DIR}/
+git clone https://github.com/vladyspavlov/community-scripts.git ${SCRIPTS_DIR}/
 cd ${SCRIPTS_DIR}
 git config user.email "admin@example.com"
 git config user.name "Bob"
@@ -389,7 +389,7 @@ sudo -iu postgres psql -c "GRANT USAGE, CREATE ON SCHEMA PUBLIC TO ${MESH_POSTGR
 if [ "$FROM_MONGO" = true ]; then
   print_green 'Converting mesh mongo to postgres'
 
-  # https://github.com/amidaware/trmm-awesome/blob/main/scripts/migrate-mesh-to-postgres.sh
+  # https://github.com/vladyspavlov/trmm-awesome/blob/main/scripts/migrate-mesh-to-postgres.sh
   mesh_data='/meshcentral/meshcentral-data'
   if [[ ! -f "${mesh_data}/meshcentral.db.json" ]]; then
     echo -ne "${RED}ERROR: meshcentral.db.json was not found${NC}\n"

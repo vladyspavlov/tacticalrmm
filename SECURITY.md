@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-[Latest](https://github.com/amidaware/tacticalrmm/releases/latest) release
+[Latest](https://github.com/vladyspavlov/tacticalrmm/releases/latest) release
 
 ## Reporting a Vulnerability
 

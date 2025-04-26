@@ -1,4 +1,4 @@
-module github.com/amidaware/tacticalrmm
+module github.com/vladyspavlov/tacticalrmm
 
 go 1.23.8
 
