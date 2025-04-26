@@ -3,7 +3,7 @@ FROM python:3.11.8-slim AS GET_SCRIPTS_STAGE
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends git && \
-    git clone https://github.com/vladyspavlov/community-scripts.git /community-scripts
+    git clone https://github.com/amidaware/community-scripts.git /community-scripts
 
 FROM python:3.11.8-slim
 
