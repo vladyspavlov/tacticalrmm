@@ -15,12 +15,6 @@ YELLOW='\033[1;33m'
 RED='\033[0;31m'
 NC='\033[0m'
 
-memTotal=$(grep -i memtotal /proc/meminfo | awk '{print $2}')
-if [[ $memTotal -lt 3627528 ]]; then
-  echo -ne "${RED}ERROR: A minimum of 4GB of RAM is required.${NC}\n"
-  exit 1
-fi
-
 osname=$(lsb_release -si)
 osname=${osname^}
 osname=$(echo "$osname" | tr '[A-Z]' '[a-z]')

@@ -49,12 +49,6 @@ if [[ "$arch" != "x86_64" ]] && [[ "$arch" != "aarch64" ]]; then
   exit 1
 fi
 
-memTotal=$(grep -i memtotal /proc/meminfo | awk '{print $2}')
-if [[ $memTotal -lt 3627528 ]]; then
-  echo -ne "${RED}ERROR: A minimum of 4GB of RAM is required.${NC}\n"
-  exit 1
-fi
-
 osname=$(lsb_release -si)
 osname=${osname^}
 osname=$(echo "$osname" | tr '[A-Z]' '[a-z]')
